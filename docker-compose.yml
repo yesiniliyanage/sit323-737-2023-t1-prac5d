@@ -1,0 +1,19 @@
+version: "3"
+services:
+  service1:
+    image: your-service1-image
+    container_name: service1
+    ports:
+      - "8000:8000"
+    networks:
+      - my-network
+  service2:
+    image: your-service2-image
+    container_name: service2
+    ports:
+      - "9000:9000"
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge
